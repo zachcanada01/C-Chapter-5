@@ -19,7 +19,7 @@ namespace TippingTable
             const double MAXDINNER = 100.00;
             const double DINNERSTEP = 10.00;
 
-            Write("Price");
+            Write("   Price");
             for (tipRate = LOWRATE; tipRate <= MAXRATE; tipRate += TIPSTEP)
                 Write("{0, 8}", tipRate.ToString("F"));
             WriteLine();
