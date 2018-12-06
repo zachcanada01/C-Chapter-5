@@ -17,6 +17,7 @@ namespace HomeSales
             int userSale;
             string userString;
             int count = 0;
+            double grandTotal;
           
             do
             {
@@ -47,13 +48,15 @@ namespace HomeSales
                 else if (userInput == "f")
                 {
                     WriteLine("Valid");
-                    WriteLine("Francis please enter the amount sold, enter z when done.");
+                    WriteLine("Francis please enter the amount sold sold for, enter z when done.");
                     userString = ReadLine();
                     userSale = Convert.ToInt32(userString);
 
                     count++;
 
                     francisTotal = francisTotal + userSale;
+                    
+
                 }
 
 
@@ -64,9 +67,12 @@ namespace HomeSales
                 
             } while(userInput != "z");
 
-            WriteLine("Danielle sold " + danielleTotal + " houses.");
-            WriteLine("Edward sold " + edwardTotal + " house.");
-            WriteLine("Francis sold " + francisTotal + " houses.");
+            grandTotal = danielleTotal + edwardTotal + francisTotal;
+
+            WriteLine("Danielle's total sales were " + danielleTotal);
+            WriteLine("Edward's total sales were " + edwardTotal);
+            WriteLine("Francis's total sales were " + francisTotal );
+            WriteLine("The grand total amount is " + grandTotal);
         }
     }
 }
